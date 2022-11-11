@@ -61,6 +61,7 @@ class WebScraping():
                     monitor_preco = monitor.find('span', class_='sc-3b515ca1-2 jTvomc priceCard').get_text()[3:]
                 except Exception as e:
                     print(e)
+                    pass
                     
             monitor_url = monitor.find('a', href=True)
             monitor_url = f"www.kabum.com.br{monitor_url['href']}"
